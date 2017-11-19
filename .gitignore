@@ -1,0 +1,11 @@
+# Visual Studio Code settings
+.vscode
+
+# Build directory (Cmake)
+build
+
+# Ignore build results
+bin
+
+# Video montage for the YouTube video
+video
