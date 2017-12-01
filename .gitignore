@@ -4,8 +4,9 @@
 # Build directory (Cmake)
 build
 
-# Ignore build results
-bin
+# Ignore build results, excepting the font
+bin/*
+!bin/UbuntuMono-B.ttf
 
 # Video montage for the YouTube video
 video

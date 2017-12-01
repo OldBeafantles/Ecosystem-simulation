@@ -2,7 +2,7 @@
 
 This project aims to be a simulation of a basic ecosystem. This is inspired from Daniel Schiffman's simulation which can be found [here](http://natureofcode.com/book/chapter-9-the-evolution-of-code#913-ecosystem-simulation).
 
-**Current version**: 1.0.0
+**Current version**: 1.1.0
 
 ## Building
 
@@ -21,6 +21,7 @@ This project uses a `CMakeLists.txt` file to build the project. The parameters f
 
 * Visual Studio 15 / 17
 * CMake > 2.5
+* C++14
 
 #### Instructions for Windows
 
@@ -59,6 +60,7 @@ cmake --build .
 
 * g++
 * CMake > 2.5
+* C++ 14
 
 #### Instructions for Linux
 
@@ -115,6 +117,10 @@ You should be able to run the simulation by opening a terminal in the output dir
 
 * `Space`: Pauses/Resumes the simulation
 
+* `Left arrow`: Slows down the simulation by 2
+
+* `Right arrow`: Speeds up the simulation by 2
+
 ## Functionning
 
 * There are `30` cells, spawning randomly on the window at the beginning of the simulation.
@@ -147,21 +153,25 @@ You can customize pretty much all the settings of the simulation, such as:
 
 * The number of HP the cells regain by eating food
 
+* The color / size / font of the text
+
 ... and more.
 
 You just need to change the constants values in the file `src/constants.hpp`.
 
 ## Possible improvments
 
-* A more *random natural* movement for the cell. Currently, the movement is a bit *predictable* (the cells are more likely to move at the center of the window).
+* [ ] A more *random natural* movement for the cell. Currently, the movement is a bit *predictable* (the cells are more likely to move at the center of the window). Brownian movement?
 
-* Gather the info about the results of the simulation and write it down in a file. So, we could make statistics about the simulation.
+* [ ] Gather the info about the results of the simulation and write it down in a file. So, we could make statistics about the simulation.
 
-* Speeding up / down the simulation.
+* [X] Speeding up / down the simulation. (Version 1.1.0)
 
-* Save the animation in a `.mp4` file.
+* [ ] Save the animation in a `.mp4` file.
 
-* Timer for the duration of the simulation.
+* [X] Timer for the duration of the simulation. (Version 1.1.0)
+
+* [ ] Generations system (with genetic inheritance).
 
 ## Contributing
 

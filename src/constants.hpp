@@ -9,16 +9,26 @@
 
 #include <SFML/Graphics/Color.hpp>
 #include <SFML/Graphics/Font.hpp>
+#include <SFML/Window/VideoMode.hpp>
 #include <SFML/Window/WindowStyle.hpp>
 
 constexpr float PI = 3.14f;  // Don't touch it
 
 // Simulation window constants
-constexpr uint16_t WINDOW_WIDTH   = 1'280;
-constexpr uint16_t WINDOW_HEIGHT  = 720;
-constexpr char     WINDOW_TITLE[] = "Ecosystem simulation";
-constexpr uint8_t  WINDOW_STYLE   = sf::Style::None;
-constexpr uint8_t  WINDOW_MAX_FPS = 60;
+const uint16_t    WINDOW_WIDTH      = sf::VideoMode::getDesktopMode().width - 200;
+const uint16_t    WINDOW_HEIGHT     = WINDOW_WIDTH * 9 / 16;
+const uint16_t    WINDOW_X_POSITION = 100;
+const uint16_t    WINDOW_Y_POSITION = (sf::VideoMode::getDesktopMode().height - WINDOW_HEIGHT) / 2;
+constexpr char    WINDOW_TITLE[]    = "Ecosystem simulation";
+constexpr uint8_t WINDOW_STYLE      = sf::Style::None;
+constexpr uint8_t WINDOW_MAX_FPS    = 60;
+
+// Font & text settings
+const char        FONT_PATH[]      = "../UbuntuMono-B.ttf";        // The path to the font (relative to the executable)
+constexpr uint8_t TIMER_TEXT_SIZE  = 34;                           // The size of the text for the timer
+const sf::Color   TIMER_TEXT_COLOR = sf::Color::White;             // The color of the text for the timer
+constexpr uint8_t TIMER_MULTIPLIER_TEXT_SIZE  = 30;                // The size of the text for the speed multiplier
+const sf::Color   TIMER_MULTIPLIER_TEXT_COLOR = sf::Color::White;  // The color of the text for the speed multiplier
 
 // Cell constants
 constexpr float       CELL_MAX_HP       = 100.f;  // The max HP of the cell
